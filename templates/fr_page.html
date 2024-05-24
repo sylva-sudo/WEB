@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "head.html" %}
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body >
+ 
+{% include "navbar.html" %}
+
+    <main class="content px-3 py-4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8">
+                    <img src="{{ url_for('video_feed') }}" class="img-thumbnail w-100">
+                </div>
+                <div class="col-lg-4">
+                    <h3>Today Scan</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nama</th>
+                                <th>Divisi</th>
+                                <th>Added</th>
+                            </tr>
+                        </thead>
+                        <tbody id="scandata">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+
+ 
+</body>
+</html>
